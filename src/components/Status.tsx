@@ -1,17 +1,18 @@
 import * as React from "react";
 import classNames from "classnames";
+import styles from "./Status.module.scss";
 
-interface IStatusProps {
+interface StatusProps {
   value: number;
 }
 
-const Status = ({ value }: IStatusProps) => (
-  <div className="status">
+const Status = ({ value }: StatusProps) => (
+  <div className={styles.status}>
     <div
       className={classNames({
-        money: true,
-        "money-negative": value < 0,
-        "money-positive": value >= 0
+        [styles.money]: true,
+        [styles["money-negative"]]: value < 0,
+        [styles["money-positive"]]: value >= 0
       })}
     >
       {value} &euro;

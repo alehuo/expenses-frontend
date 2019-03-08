@@ -1,9 +1,12 @@
 import * as React from "react";
+import styles from "./Title.module.scss";
 
-interface TitleProps {
+interface Props {
   title: string;
 }
 
-const Title = ({ title }: TitleProps) => <div className="title">{title}</div>;
+const Title: React.SFC<Props> = ({ title }) => (
+  <div className={styles.title}>{title}</div>
+);
 
 export default Title;

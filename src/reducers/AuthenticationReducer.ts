@@ -1,28 +1,30 @@
-import IAction from "./IAction";
+import { ActionType } from "typesafe-actions";
+import * as authenticationActions from "./actions/AuthenticationActions";
+import { Reducer } from "redux";
+import { SET_TOKEN } from "./Constants";
 
-const initialState = {
+interface AuthenticationState {
+  readonly isAuthenticated: boolean;
+  readonly token: string;
+}
+
+const initialState: AuthenticationState = {
   isAuthenticated: false,
   token: ""
 };
 
-const AuthenticationActions = {
-  SET_TOKEN: "SET_TOKEN"
-};
+export type AuthenticationAction = ActionType<typeof authenticationActions>;
 
-export const setToken = (token: string): IAction => {
-  return {
-    payload: {
-      token
-    },
-    type: AuthenticationActions.SET_TOKEN
-  };
-};
-
-export default (state = initialState, action: IAction) => {
+const reducer: Reducer<AuthenticationState, AuthenticationAction> = (
+  state = initialState,
+  action
+) => {
   switch (action.type) {
-    case AuthenticationActions.SET_TOKEN:
-      return Object.assign({}, state, { token: action.payload.token });
+    case SET_TOKEN:
+      return { ...{}, ...state, ...{ token: action.payload.token } };
     default:
       return state;
   }
 };
+
+export default reducer;

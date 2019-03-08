@@ -13,21 +13,19 @@ import Profile from "./pages/Profile";
 const NotFound = () => <Title title="Not found" />;
 
 const App = () => (
-  <React.Fragment>
-    <Router>
-      <React.Fragment>
-        <Nav />
-        <Content>
-          <Switch>
-            <Route exact={true} path="/home" component={Home} />
-            <Route exact={true} path="/profile" component={Profile} />
-            <Route exact={true} path="/history" component={History} />
-            <Route component={NotFound} />
-          </Switch>
-        </Content>
-        <Footer />
-      </React.Fragment>
-    </Router>
-  </React.Fragment>
+  <Router>
+    <React.Fragment>
+      <Nav />
+      <Content>
+        <Switch>
+          <Route exact={true} path="/home" component={Home} />
+          <Route exact={true} path="/profile" component={Profile} />
+          <Route exact={true} path="/history" component={History} />
+          <Route component={NotFound} />
+        </Switch>
+      </Content>
+      <Footer />
+    </React.Fragment>
+  </Router>
 );
 export default App;

@@ -1,7 +1,12 @@
 import * as React from "react";
+import styles from "./BtnRow.module.scss";
 
-const BtnRow = ({ children }: { children: any }) => (
-  <div className="btn-row">{children}</div>
+interface Props {
+  children: any;
+}
+
+const BtnRow: React.SFC<Props> = ({ children }) => (
+  <div className={styles["btn-row"]}>{children}</div>
 );
 
 export default BtnRow;

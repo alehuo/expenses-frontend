@@ -1,0 +1,24 @@
+.status {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.money-negative {
+  color: rgb(165, 34, 34);
+}
+
+.money-positive {
+  color: black;
+}
+
+.money {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.8em;
+  height: 100%;
+  width: 100%;
+}

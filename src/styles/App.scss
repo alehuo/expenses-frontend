@@ -1,4 +1,4 @@
-.app {
+.App {
   color: white;
   height: 100%;
 }
@@ -12,7 +12,7 @@
   /*background-color: rgba(255, 255, 255, 0.13);*/
 }
 
-a.nav-link {
+.nav-link {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,11 +22,19 @@ a.nav-link {
   height: 100%;
 }
 
-a.nav-link,
-a.nav-link:active,
-a.nav-link:hover {
+.nav-link,
+.nav-link:active,
+.nav-link:hover {
   text-decoration: none;
   color: white;
+}
+
+.bottom-dot:before {
+  content: "\025cb";
+}
+
+.selected > .bottom-dot:before {
+  content: "\025cf";
 }
 
 .boxshadow {
@@ -139,7 +147,14 @@ div.footer {
   font-size: 2.8em;
   height: 100%;
   width: 100%;
+}
+
+.money-negative {
   color: rgb(165, 34, 34);
+}
+
+.money-positive {
+  color: black;
 }
 
 .transactions {
@@ -175,10 +190,6 @@ div.footer {
   width: 40%;
   font-weight: bold;
   font-size: 1.25em;
-}
-
-.negative:before {
-  content: "-";
 }
 
 .negative {

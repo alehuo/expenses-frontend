@@ -11,12 +11,20 @@ const Home = () => (
     <Status value={-500.95} />
     <BtnRow>
       <button
-        className={classNames({ [styles.btn]: true, [styles.plus]: true })}
+        className={classNames({
+          [styles.btn]: true,
+          [styles.plus]: true,
+          [styles.elevated]: true
+        })}
       >
         + Income
       </button>
       <button
-        className={classNames({ [styles.btn]: true, [styles.minus]: true })}
+        className={classNames({
+          [styles.btn]: true,
+          [styles.minus]: true,
+          [styles.elevated]: true
+        })}
       >
         &minus; Expense
       </button>

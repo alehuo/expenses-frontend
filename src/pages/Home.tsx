@@ -22,7 +22,9 @@ const Home = () => (
       </button>
     </BtnRow>
     <Title title="Recent activity" />
-    <TransactionView />
+    <div className={styles["transaction-wrapper-home"]}>
+      <TransactionView />
+    </div>
   </>
 );
 

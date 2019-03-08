@@ -1,19 +1,16 @@
 .content {
-  width: 90%;
-  /* Firefox */
-  height: -moz-calc(100% - 160px);
-  /* WebKit */
-  height: -webkit-calc(100% - 160px);
-  /* Opera */
-  height: -o-calc(100% - 160px);
-  /* Standard */
+  width: 600px;
   height: calc(100% - 160px);
   background-color: white;
   border-radius: 20px;
   margin-left: auto;
   margin-right: auto;
   color: black;
-  padding: 3%;
+  padding: 10px 30px 10px 30px;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  @media only screen and (max-width: 650px) {
+    width: 90%;
+  }
 }
+

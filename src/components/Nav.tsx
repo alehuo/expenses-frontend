@@ -6,7 +6,7 @@ const Nav = () => (
   <nav className={styles.nav}>
     <NavLink
       className={styles["nav-link"]}
-      activeClassName="selected"
+      activeClassName={styles.selected}
       to="/home"
     >
       <span className={styles.linkText}>Home</span>
@@ -14,7 +14,7 @@ const Nav = () => (
     </NavLink>
     <NavLink
       className={styles["nav-link"]}
-      activeClassName="selected"
+      activeClassName={styles.selected}
       to="/history"
     >
       <span className={styles.linkText}>History</span>
@@ -22,7 +22,7 @@ const Nav = () => (
     </NavLink>
     <NavLink
       className={styles["nav-link"]}
-      activeClassName="selected"
+      activeClassName={styles.selected}
       to="/profile"
     >
       <span className={styles.linkText}>Profile</span>

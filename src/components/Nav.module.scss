@@ -4,6 +4,12 @@
   align-items: center;
   justify-content: center;
   height: 80px;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  @media only screen and (max-width: 650px) {
+    width: 90%;
+  }
 }
 
 .nav-link {
@@ -23,7 +29,7 @@
   }
 }
 
-.selected > .bottom-dot:before {
+.selected > .bottomDot:before {
   content: "\025cf";
 }
 

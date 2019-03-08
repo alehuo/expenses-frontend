@@ -26,6 +26,10 @@
   background-color: transparent;
   margin: 10px;
   font-size: 1.2em;
+  outline: 0;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .minus,
@@ -51,4 +55,12 @@
 .plus:hover {
   color: white;
   background-color: rgba(49, 165, 34, 0.8);
+}
+
+.transaction-wrapper-home {
+  height: calc(100% - 90px - 70px - 60px);
+}
+
+.transaction-wrapper-history {
+  height: calc(100% - 60px);
 }

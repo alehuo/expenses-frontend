@@ -1,14 +1,17 @@
-.App {
-  color: white;
-  height: 100%;
+.shadow {
+  -moz-box-shadow: inset 0 0 2px #000000;
+  -webkit-box-shadow: inset 0 0 2px #000000;
+  box-shadow: inset 0 0 2px #000000;
 }
 
-.bottom-dot:before {
-  content: "\025cb";
-}
-
-.selected > .bottom-dot:before {
-  content: "\025cf";
+.spacer {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.274);
+  height: 1px;
 }
 
 .boxshadow {
@@ -48,26 +51,4 @@
 .plus:hover {
   color: white;
   background-color: rgba(49, 165, 34, 0.8);
-}
-
-.spacer {
-  margin-top: 15px;
-  margin-bottom: 15px;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.274);
-  height: 1px;
-}
-
-.moneyStatus {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.shadow {
-  -moz-box-shadow: inset 0 0 2px #000000;
-  -webkit-box-shadow: inset 0 0 2px #000000;
-  box-shadow: inset 0 0 2px #000000;
 }

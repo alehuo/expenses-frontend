@@ -9,24 +9,24 @@ const Nav = () => (
       activeClassName="selected"
       to="/home"
     >
-      <span className="link-text">Home</span>
-      <span className="bottom-dot" />
+      <span className={styles.linkText}>Home</span>
+      <span className={styles.bottomDot} />
     </NavLink>
     <NavLink
       className={styles["nav-link"]}
       activeClassName="selected"
       to="/history"
     >
-      <span className="link-text">History</span>
-      <span className="bottom-dot" />
+      <span className={styles.linkText}>History</span>
+      <span className={styles.bottomDot} />
     </NavLink>
     <NavLink
       className={styles["nav-link"]}
       activeClassName="selected"
       to="/profile"
     >
-      <span className="link-text">Profile</span>
-      <span className="bottom-dot" />
+      <span className={styles.linkText}>Profile</span>
+      <span className={styles.bottomDot} />
     </NavLink>
   </nav>
 );

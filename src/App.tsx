@@ -1,5 +1,4 @@
 import * as React from "react";
-import "./styles/App.scss";
 
 import Nav from "./components/Nav";
 import Content from "./components/Content";

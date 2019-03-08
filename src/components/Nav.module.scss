@@ -22,3 +22,14 @@
     color: white;
   }
 }
+
+.selected > .bottom-dot:before {
+  content: "\025cf";
+}
+
+.bottomDot:before {
+  content: "\025cb";
+}
+
+.linkText {
+}

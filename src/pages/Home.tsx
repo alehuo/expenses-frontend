@@ -3,7 +3,7 @@ import Status from "../components/Status";
 import BtnRow from "../components/BtnRow";
 import Btn from "../components/Btn";
 import Title from "../components/Title";
-import Transactions from "../components/Transactions";
+import { TransactionView } from "../components/TransactionView";
 
 const Home = () => (
   <React.Fragment>
@@ -13,7 +13,7 @@ const Home = () => (
       <Btn className="btn minus">&minus; Expense</Btn>
     </BtnRow>
     <Title title="Recent activity" />
-    <Transactions />
+    <TransactionView />
   </React.Fragment>
 );
 

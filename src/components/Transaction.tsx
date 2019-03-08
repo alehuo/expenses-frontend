@@ -1,6 +1,8 @@
 import * as React from "react";
+import classnames from "classnames";
 
 export interface Transaction {
+  id: number;
   value: number;
   date: Date;
 }
@@ -11,7 +13,9 @@ interface Props {
 
 const SingleTransaction: React.SFC<Props> = ({ transaction }) => (
   <div className="transaction">
-    <span className={"value " + (transaction.value < 0 && "negative")}>
+    <span
+      className={classnames({ value: true, negative: transaction.value < 0 })}
+    >
       {transaction.value}&euro;
     </span>
     <span className="date">{transaction.date.toISOString()}</span>

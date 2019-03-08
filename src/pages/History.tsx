@@ -1,11 +1,11 @@
 import * as React from "react";
 import Title from "../components/Title";
-import Transactions from "../components/Transactions";
+import { TransactionView } from "../components/TransactionView";
 
 const History = () => (
   <React.Fragment>
     <Title title="History" />
-    <Transactions />
+    <TransactionView />
   </React.Fragment>
 );
 

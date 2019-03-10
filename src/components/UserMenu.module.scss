@@ -1,0 +1,61 @@
+$base-padding-left: 20px;
+$base-padding-top-bottom: 10px;
+
+.userMenu {
+  padding-top: $base-padding-top-bottom;
+  padding-bottom: $base-padding-top-bottom;
+  position: fixed;
+  top: 10px;
+  &.userMenuOpen {
+    background-color: white;
+    color: black;
+    border-radius: 15px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  }
+}
+
+.userMenuHeader {
+  padding-left: $base-padding-left;
+  padding-right: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.userIcon {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border-radius: 50%;
+  &.userIconOpen {
+    background-color: rgba(0, 0, 0, 0.13);
+  }
+}
+
+.menuArrow {
+  margin: 10px;
+  &.menuArrowOpen {
+    color: rgba(0, 0, 0, 0.13);
+  }
+}
+
+.menuItems {
+  margin-top: 10px;
+  display: block;
+  width: 100%;
+  li {
+    user-select: none;
+    list-style-type: none;
+    height: 30px;
+    padding-left: $base-padding-left;
+    line-height: 30px;
+    &:hover {
+      cursor: pointer;
+      background-color: rgba(0, 0, 0, 0.13);
+    }
+  }
+}

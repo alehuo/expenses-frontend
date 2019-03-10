@@ -1,8 +1,15 @@
 import * as React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, withRouter } from "react-router-dom";
 import styles from "./Nav.module.scss";
+import { connect } from "react-redux";
+import { RootState } from "../store";
+import { UserMenu } from "./UserMenu";
 
-const Nav = () => (
+interface Props {
+  authenticated: boolean;
+}
+
+const Nav: React.SFC<Props> = ({ authenticated }) => (
   <nav className={styles.nav}>
     <NavLink
       className={styles["nav-link"]}
@@ -20,15 +27,21 @@ const Nav = () => (
       <span className={styles.linkText}>History</span>
       <span className={styles.bottomDot} />
     </NavLink>
-    <NavLink
-      className={styles["nav-link"]}
-      activeClassName={styles.selected}
-      to="/profile"
-    >
-      <span className={styles.linkText}>Profile</span>
-      <span className={styles.bottomDot} />
-    </NavLink>
+    {authenticated && (
+      <div className={styles["nav-link"]}>
+        <UserMenu />
+      </div>
+    )}
   </nav>
 );
 
-export default Nav;
+export { Nav };
+
+const mapStateToProps = (state: RootState) => ({
+  authenticated: state.auth.isAuthenticated
+});
+
+// @ts-ignore
+const ConnectedNav = withRouter(connect(mapStateToProps)(Nav));
+
+export default ConnectedNav;

@@ -9,7 +9,7 @@ interface AuthenticationState {
 }
 
 const initialState: AuthenticationState = {
-  isAuthenticated: false,
+  isAuthenticated: true,
   token: ""
 };
 
